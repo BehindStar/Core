@@ -1,26 +1,26 @@
-# Kinds of Proxy Objects
+# 代理对象的类型
 
-Out of the box, the DynamicProxy provides several kinds of proxy objects that you can use. They fall into two broad categories:
+Out of the box, 动态代理提供了几种代理对象以供使用。它们分为两大类：
 
-## Inheritance-based
+## 基于继承的：
 
-Inheritance-based proxies are created by inheriting a proxy class. The proxy intercepts calls to virtual members of the class and forwards them to base implementation. In this case, the proxy and proxied object are one. This also means you can't create inheritance based proxy for a pre-existing object. There's one inheritance-based proxy kind in DynamicProxy.
+基于继承的代理通过继承一个代理类创建。 代理拦截对类的虚成员的调用，并转发它们到基实现。在这种情况下，代理和被代理的对象是一体的。这也意味着不能为已存在的对象创建基于继承的代理。在动态代理中有一个基于继承的代理类型。
 
-* Class proxy - creates an inheritance-based proxy for a class. Only virtual members of the class can be intercepted.
+* 类代理 - 为类创建基于继承的代理。只有类的虚成员可以被拦截。
 
-## Composition-based
+## 基于组合的：
 
-Composition-based proxy is a new object that inherits from proxied class/implements proxied interface and (optionally) forwards intercepted calls to the target object. DynamicProxy exposes the following composition-based proxy types:
+基于组合的代理是一个继承自被代理类/实现被代理接口并（可选）转发被拦截的调用到目标对象的新对象。动态代理公开了以下基于组合的代理类型：
 
-* Class proxy with target - this proxy kind targets classes. It is not a perfect proxy and if the class has non-virtual methods or public fields these can't be intercepted giving users of the proxy inconsistent view of the state of the object. Because of that, it should be used with caution.
+* 有目标类代理 - 这种代理类型面向类。这不是一个完美的代理，如果类有不能被拦截的非虚拟方法或公共字段，giving users of the proxy inconsistent view of the state of the object. 因此，应该慎用。
 
-* Interface proxy without target - this proxy kind targets interfaces. It does not expect target object to be supplied. Instead, interceptors are expected to provide implementation for all members of the proxy.
+* 无目标接口代理 - 这种代理类型面向接口。不需要提供目标对象。相反，拦截器需要为代理提供所有成员的实现。
 
-* Interface proxy with target - as its name implies wraps objects implementing selected interfaces forwarding calls to these interfaces to the target object.
+* 有目标接口代理 - 顾名思义包装对象实现所选接口，转发这些接口的调用到目标对象。
 
-* Interface proxy with target interface - this kind of proxy is kind of a hybrid of two other interface proxy kinds. It allows, but not requires target object to be supplied. It also allows the target to be swapped during the lifetime of the proxy. It is not tied to one type of the proxy target so one proxy type can be reused for different target types as long as they implement the target interface.
+* 有目标接口接口代理 - 这种代理是其他两种代理类型的混合体类型。它允许，但不需要提供目标对象。也允许在代理的生命期内交换目标。它不依赖于代理目标的一个类型，因此一个代理类型可以被不同的目标类型重用，只要目标类型实现了目标接口。
 
-## External resources
+## 外部资源
 
 * [Tutorial on DynamicProxy discussing with examples all kinds of proxies](http://kozmic.pl/dynamic-proxy-tutorial/)
 * [Castle Dynamic Proxy not intercepting method calls when invoked from within the class](http://stackoverflow.com/questions/6633914/castle-dynamic-proxy-not-intercepting-method-calls-when-invoked-from-within-the/)
