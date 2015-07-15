@@ -1,11 +1,11 @@
-# Castle DynamicProxy
+# Castle 动态代理（DynamicProxy）
 
-DynamicProxy generates proxies for your objects that you can use to transparently add or alter behavior to them, provide pre/post processing and many other things. Castle Windsor uses proxies to enable its interception capabilities, or for Typed Factories. [NHibernate](http://nhforge.org) uses it to provide lazy loading capabilities. [Moq](http://moq.me) and [Rhino Mocks](http://www.ayende.com/projects/rhino-mocks.aspx) both use it to provide their mocking capabilities. These are just a few better known and popular usages of the framework.
+动态代理为对象生成代理，这样就可以为它们透明的添加或修改行为，提供前/后处理和许多其它东西。Castle Windsor 使用代理来实现拦截能力和强类型工厂。[NHibernate](http://nhforge.org) 使用代理提供延迟加载能力。[Moq](http://moq.me) 和 [Rhino Mocks](http://www.ayende.com/projects/rhino-mocks.aspx) 使用代理提供模拟能力。这些仅是一些广为人知的框架和流行用法。
 
-* If you're new to DynamicProxy you can read a [quick introduction](dynamicproxy-introduction.md).
-* Browse through description of the core types in the library.
-* Go into more advanced, in detail discussion:
-  * [Kinds of proxy objects](dynamicproxy-kinds-of-proxy-objects.md)
+* 如果是第一次接触动态代理可以阅读 [简单介绍](dynamicproxy-introduction.md)。
+* 浏览库中核心类型的描述。
+* 深入高级内容，详细讨论：
+  * [代理对象的类型](dynamicproxy-kinds-of-proxy-objects.md)
   * [Leaking this](dynamicproxy-leaking-this.md)
   * [Make proxy generation hooks purely functional](dynamicproxy-generation-hook-pure-function.md)
   * [Overriding Equals/GetHashCode on proxy generation hook](dynamicproxy-generation-hook-override-equals-gethashcode.md)
