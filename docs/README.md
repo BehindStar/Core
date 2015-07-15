@@ -1,12 +1,12 @@
-# Castle Core Documentation
+# Castle 核心文档
 
 <img align="right" src="images/castle-logo.png">
 
-Other than the three main projects, Castle consists of a whole range of smaller, but very useful libraries that you can take advantage of in your application.
+除了这三个主要项目之外，Castle 由众多比较小，但十分有用的库组成。
 
-## DynamicProxy
+## 动态代理（DynamicProxy）
 
-[Castle DynamicProxy](dynamicproxy.md) - a lightweight, lightning fast framework for generating proxies on the fly, used extensively by multiple projects within Castle (Windsor, MonoRail) and outside of it (NHibernate, Rhino Mocks, AutoMapper and many others).
+[Castle 动态代理](dynamicproxy.md) - 一个轻量级，极速的运行时代理生成框架，在多个项目中广泛使用，如 Castle （Windsor，MonoRail）和 Castle 以外的其它项目（NHibernate，Rhino Mocks，AutoMapper 和 许多其它项目）。
 
 ## DictionaryAdapter
 
